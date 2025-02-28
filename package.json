@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "name": "@tool-handle/root",
+  "type": "module",
+  "scripts": {
+    "dev": "turbo watch build",
+    "build": "turbo run build",
+    "check": "turbo run check",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "test": "turbo run test",
+    "coverage": "turbo run coverage",
+    "typedoc": "typedoc --out typedoc/",
+    "clean": "pnpm run -r clean && rimraf .turbo typedoc",
+    "clean-all": "pnpm run -r clean-all && rimraf .turbo typedoc node_modules"
+  },
+  "devDependencies": {
+    "@eslint/js": "catalog:dev",
+    "@types/node": "catalog:dev",
+    "eslint": "catalog:dev",
+    "eslint-plugin-jsdoc": "catalog:dev",
+    "prettier": "catalog:dev",
+    "rimraf": "catalog:dev",
+    "turbo": "catalog:dev",
+    "typedoc": "catalog:dev",
+    "typescript": "catalog:dev",
+    "typescript-eslint": "catalog:dev"
+  },
+  "packageManager": "pnpm@10.5.2"
+}
