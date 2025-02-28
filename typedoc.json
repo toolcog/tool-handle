@@ -1,0 +1,13 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPointStrategy": "packages",
+  "entryPoints": [
+    "packages/tool-handle",
+    "packages/command",
+    "packages/http"
+  ],
+  "excludeInternal": true,
+  "excludePrivate": true,
+  "hideGenerator": true,
+  "readme": "none"
+}

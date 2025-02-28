@@ -1,0 +1,23 @@
+packages:
+  - packages/tool-handle
+  - packages/command
+  - packages/http
+
+catalogs:
+  dep:
+    "@tool-form/args": ^0.1.0
+    "@tool-form/markdown": ^0.1.0
+    "@tool-form/multipart": ^0.1.0
+    tool-form: ^0.1.0
+    tool-json: ^0.1.0
+    tool-query: ^0.1.0
+  dev:
+    "@eslint/js": ^9.21.0
+    "@types/node": ^22.13.0
+    eslint: ^9.21.0
+    eslint-plugin-jsdoc: ^50.6.0
+    prettier: ^3.5.0
+    rimraf: ^6.0.0
+    typedoc: ^0.27.0
+    typescript: ^5.7.0
+    typescript-eslint: ^8.25.0

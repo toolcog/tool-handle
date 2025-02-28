@@ -1,0 +1,59 @@
+{
+  "name": "@tool-handle/http",
+  "version": "0.1.0",
+  "description": "Tool Handle HTTP Handler",
+  "author": "Tool Cognition Inc.",
+  "license": "MIT",
+  "homepage": "https://github.com/toolcog/tool-handle/tree/main/packages/http#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toolcog/tool-handle.git",
+    "directory": "packages/http"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && prettier --log-level silent --ignore-path '' --write dist/",
+    "check": "tsc --noEmit",
+    "lint": "eslint",
+    "format": "prettier --write ./",
+    "test": "node --test --conditions=types --experimental-strip-types '**/*.test.ts'",
+    "coverage": "node --test --conditions=types --experimental-strip-types --experimental-test-coverage '**/*.test.ts'",
+    "typedoc": "typedoc --out typedoc/",
+    "size": "size-limit",
+    "clean": "rimraf .turbo dist typedoc",
+    "clean-all": "rimraf .turbo dist typedoc node_modules"
+  },
+  "type": "module",
+  "types": "./src/lib.ts",
+  "main": "./dist/lib.js",
+  "exports": {
+    ".": {
+      "types": "./src/lib.ts",
+      "import": "./dist/lib.js"
+    }
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "tool-json": "catalog:dep",
+    "tool-form": "catalog:dep",
+    "tool-handle": "workspace:*"
+  },
+  "devDependencies": {
+    "@eslint/js": "catalog:dev",
+    "@tool-form/markdown": "catalog:dep",
+    "@tool-form/multipart": "catalog:dep",
+    "@types/node": "catalog:dev",
+    "eslint": "catalog:dev",
+    "eslint-plugin-jsdoc": "catalog:dev",
+    "prettier": "catalog:dev",
+    "rimraf": "catalog:dev",
+    "typedoc": "catalog:dev",
+    "typescript": "catalog:dev",
+    "typescript-eslint": "catalog:dev"
+  },
+  "size-limit": [
+    {
+      "name": "lib",
+      "path": "dist/lib.js"
+    }
+  ]
+}
